@@ -36,10 +36,10 @@ const onButtonClick = (type) => {
     <li class="page-item"><a class="page-link"  onClick={() => onButtonClick('prev')}>Previous</a></li>
   {
       new Array(numberOfButton).fill("").map((el, index) => (
-        <li class={`page-item ${index+1 === counter ? "active" : null}`}> onClick={() => setCounter(index+1)}>{index + 1}</li>
+        <li class={`page-item ${index+1 === counter ? "active" : null}`}><a   onClick={() => setCounter(index+1)}>{index + 1}</a></li>
       ))
   }
-    <li class="page-item"> onClick={() => onButtonClick('next')}>Next</li>
+    <li class="page-item"><a  onClick={() => onButtonClick('next')}>Next</a></li>
   </ul>
 </nav>
 
